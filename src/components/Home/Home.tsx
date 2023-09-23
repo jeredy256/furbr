@@ -109,7 +109,9 @@ const Home = () => {
         {/* <!-- Adicione mais postagens aqui --> */}
     </section>
 
-      <footer>Criador JEREDY</footer>
+      <footer className='pora'><strong>Criador JEREDY</strong>
+      <p className='copy'>© 2023 Página de Mangás</p>
+      </footer>
     
     </>
   );
