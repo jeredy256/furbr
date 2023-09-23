@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <>
       <header>
-      <h1 className="h1alt">Seja Bem vindo seu puto</h1>
+      <h1 className="h1alt">Seja Bem vindo seu puto1</h1>
       </header>
       <div id="hamburger">&#9776;</div>
       
