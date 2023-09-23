@@ -15,17 +15,17 @@ import Lesbi_ from './components/pages/Sfw/Lesbica'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Router>
     <Routes>
-      <Route path='/react-page' element={<Home />} />
-      <Route path='/react-page/header' element={<Header />} />
+      <Route path='/furbr' element={<Home />} />
+      <Route path='/furbr/header' element={<Header />} />
         {/* nsfw */}
-        <Route path='/react-page/gay' element={<Gay />} />
-      <Route path='/react-page/hetero' element={<Hetero />} />
-      <Route path='/react-page/lesbi' element={<Lesbi />} />
-      <Route path='/react-page/futa' element={<Futa />} />
+        <Route path='/gay' element={<Gay />} />
+      <Route path='/furbr/hetero' element={<Hetero />} />
+      <Route path='/furbr/lesbi' element={<Lesbi />} />
+      <Route path='/furbr/futa' element={<Futa />} />
       {/* sfw */}
-      <Route path='/react-page/gay_' element={<Gays_ />} />
-      <Route path='/react-page/hetero_' element={<Hetero_ />} />
-      <Route path='/react-page/lesbi_' element={<Lesbi_ />} />
+      <Route path='/furbr/gay_' element={<Gays_ />} />
+      <Route path='/furbr/hetero_' element={<Hetero_ />} />
+      <Route path='/furbr/lesbi_' element={<Lesbi_ />} />
       
       
 
