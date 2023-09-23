@@ -9,6 +9,7 @@ const Gay = () => {
         <div>
         <Header />
         <div className={style.container}>
+            <h1>finalmente ta ok a pasta gay</h1>
         <img
       src="https://raw.githubusercontent.com/Jefrey256/imgs/main/page7/001.jpg"
       alt="" />
