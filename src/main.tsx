@@ -13,6 +13,7 @@ import Gays_ from './components/pages/Sfw/Gays'
 import Hetero_ from './components/pages/Sfw/Hetero'
 import Lesbi_ from './components/pages/Sfw/Lesbica'
 import Gay from './components/pages/Nsfw/Gay'
+import Erro from './components/Error'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Router>
@@ -30,6 +31,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Route path='/furbr/gay_' element={<Gays_ />} />
       <Route path='/furbr/hetero_' element={<Hetero_ />} />
       <Route path='/furbr/lesbi_' element={<Lesbi_ />} />
+
+      <Route path='*' element={<Erro />} />
       
       
 
