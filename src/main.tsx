@@ -12,25 +12,30 @@ import Futa from './components/pages/Nsfw/Futa'
 import Gays_ from './components/pages/Sfw/Gays'
 import Hetero_ from './components/pages/Sfw/Hetero'
 import Lesbi_ from './components/pages/Sfw/Lesbica'
+//import Gay from './components/pages/Nsfw/Gay'
+
 import Gay from './components/pages/Nsfw/Gay'
-import Erro from './components/Error'
+import Comentarios from './components/Comentario/index'
+import Erro from './components/Error/index'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Router>
-    <Routes>
+  <Router >
+    <Routes >
       <Route path='/furbr' element={<Home />} />
-      <Route path='/furbr/header' element={<Header />} />
+      <Route path='/jeredy256/furbr/header' element={<Header />} />
         {/* nsfw */}
         {/* <Route path='/gay' element={<Gay />} /> */}
-        <Route path='/furbr/gay' element={<Gay />} />
+        <Route path='/furbr/gay' element={<Gay />}/>
 
-      <Route path='/furbr/hetero' element={<Hetero />} />
+      <Route path='/jeredy256/furbr/hetero' element={<Hetero />} />
       <Route path='/furbr/lesbi' element={<Lesbi />} />
       <Route path='/furbr/futa' element={<Futa />} />
       {/* sfw */}
       <Route path='/furbr/gay_' element={<Gays_ />} />
       <Route path='/furbr/hetero_' element={<Hetero_ />} />
       <Route path='/furbr/lesbi_' element={<Lesbi_ />} />
+
+      <Route patb="/furbr/coment" element={<Comentarios />} />
 
       <Route path='*' element={<Erro />} />
       
