@@ -1,6 +1,7 @@
 
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
+import Comentarios from "../../Comentario";
 const Gays_ = () =>{
     return(
         <>
@@ -11,6 +12,7 @@ const Gays_ = () =>{
                 aki e o swf
             </h1>
         </div>
+        <Comentarios />
         <Footer />
         </>
     )

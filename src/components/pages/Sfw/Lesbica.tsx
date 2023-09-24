@@ -1,3 +1,5 @@
+import Comentarios from "../../Comentario";
+import Footer from "../../Footer/Footer";
 import Header from "../../Header/Header";
 
 const Lesbi_ = () =>{
@@ -5,6 +7,8 @@ const Lesbi_ = () =>{
         <>
         <Header />
         <h1>LEs</h1>
+        <Comentarios />
+        <Footer />
         </>
     )
 }

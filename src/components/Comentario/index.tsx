@@ -1,44 +1,62 @@
 import React, { useState, useEffect } from "react";
+import { ref, push, onValue } from "firebase/database";
+import { db } from "../../firebase"; // Importe a configuração do Firebase
+//css
+import style from './Coment.module.css'
+
+// Defina o tipo para os comentários
+interface Comentario {
+  texto: string;
+}
 
 function Comentarios() {
   const [comentario, setComentario] = useState("");
-  const [comentarios, setComentarios] = useState<string[]>([]);
+  const [comentarios, setComentarios] = useState<Comentario[]>([]);
+  const comentariosRef = ref(db, "comentarios");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Adicionar o comentário ao array de comentários no estado local
-    setComentarios([...comentarios, comentario]);
+    // Adicione o comentário ao banco de dados
+    const novoComentario: Comentario = { texto: comentario };
+    push(comentariosRef, novoComentario); // Armazena o comentário no Firebase
+
+    // Limpe o campo de entrada do comentário
     setComentario("");
-
-    // Atualizar o arquivo JSON local com o novo comentário
-    const novoComentario = { comentario: comentario };
-    const novoComentariosArray = [...comentarios, novoComentario];
-    const novoComentariosJSON = JSON.stringify({ comentarios: novoComentariosArray });
-
-    // Enviar o JSON para atualizar o arquivo
-    await fetch("atualizar-comentarios.php", {
-      method: "POST",
-      body: novoComentariosJSON,
-    });
   };
 
   useEffect(() => {
-    // Carregar os comentários existentes do arquivo JSON local
-    async function carregarComentarios() {
-      const response = await fetch("comentarios.json");
-      if (response.ok) {
-        const data = await response.json();
-        setComentarios(data.comentarios);
+    // Use 'onValue' para ouvir atualizações em tempo real
+    onValue(comentariosRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const comentariosArray: Comentario[] = Object.values(data);
+        // Inverta a ordem dos comentários para exibir os mais recentes primeiro
+        setComentarios(comentariosArray.reverse());
+      } else {
+        setComentarios([]);
       }
-    }
-
-    carregarComentarios();
+    });
   }, []);
 
   return (
-    <div>
-      {/* ... código anterior do componente ... */}
+    <div className={style.driv}>
+      <h2 className={style.h2o}>Comentários</h2>
+      <form className={style.form1} onSubmit={handleSubmit}>
+        <input className={style.input1}
+          type="text"
+          placeholder="Digite seu comentário"
+          value={comentario}
+          onChange={(e) => setComentario(e.target.value)}
+        />
+        <button className={style.button1}
+        type="submit">Enviar</button>
+      </form>
+      <ul className={style.ul1}>
+        {comentarios.map((comentario, index) => (
+          <li className={style.li1} key={index}>{comentario.texto}</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 import style from './Style.module.css'
+import Comentarios from "../../Comentario";
 
 const Gay = () => {
     return(
@@ -14,6 +15,7 @@ const Gay = () => {
       src="https://raw.githubusercontent.com/Jefrey256/imgs/main/page7/001.jpg"
       alt="" />
          </div> 
+         <Comentarios />
         <Footer />
         </div>
         </>

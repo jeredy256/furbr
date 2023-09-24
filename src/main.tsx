@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Route path='/furbr/hetero_' element={<Hetero_ />} />
       <Route path='/furbr/lesbi_' element={<Lesbi_ />} />
 
-      <Route patb="/furbr/coment" element={<Comentarios />} />
+      <Route path="/furbr/coment" element={<Comentarios />} />
 
       <Route path='*' element={<Erro />} />
       
