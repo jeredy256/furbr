@@ -1,6 +1,6 @@
 import  { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './estyle.css';
+import './index.css';
 
 
 const Home = () => {
@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <>
       <header>
-      <h1 className="h1alt">Seja Bem vindo seu puto1</h1>
+      <h1 className="h1alt">Seja Bem vindo a FURBRComics</h1>
       </header>
       <div id="hamburger">&#9776;</div>
       

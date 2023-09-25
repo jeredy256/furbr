@@ -15,6 +15,7 @@ import Futa from '../components/pages/Nsfw/Futa'
 import Gays_ from '../components/pages/Sfw/Gays'
 import Hetero_ from '../components/pages/Sfw/Hetero'
 import Lesbi_ from '../components/pages/Sfw/Lesbica'
+import Testt from '../components/pages/Teste'
 
 
 const MainRouter = () => {
@@ -35,6 +36,8 @@ const MainRouter = () => {
       <Route path='/furbr/lesbi_' element={<Lesbi_ />} />
 
       <Route path="/furbr/coment" element={<Comentarios />} />
+      {/* //teste */}
+      <Route path='/furbr/testt' element={<Testt />}/>
 
       <Route path='*' element={<Erro />} />
       

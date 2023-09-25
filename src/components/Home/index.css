@@ -18,16 +18,16 @@
     box-sizing: border-box;
   }
   
-  /* @font-face {
+  @font-face {
     font-family: 'fonte';
     src: url(../fonte/AlfaSlabOne-Regular.ttf) format('truetype');
   }
-   */
+  
   /* Estilo para ocultar o submenu */
-  /* #menu .lulu {
+  #menu .lulu {
     display: none;
   }
-   */
+  
   /* Estilo para mostrar o submenu quando o item pai for clicado */
   #menu .has-submenu.active .lulu {
     display: block;
@@ -270,18 +270,14 @@
     margin: auto;
     max-width: 100%;
   }
-  .pig h2 {
-    color: white;
-  }
-
- .pora {
-  font-size: large;
-  margin-right: 20px;
-  text-align: end;
- }
- .pora p {
-  
+  footer {
+    position: fixed; /* Fixa o elemento no lugar */
+  bottom: 0; /* O elemento ficará na parte inferior da janela */
+  left: 0; /* Alinhado à esquerda */
+  width: 100%; /* Largura total */
+  background-color: #333; /* Cor de fundo do footer */
+  color: #fff; /* Cor do texto do footer */
+  padding: 10px; /* Espaçamento interno do footer */
   text-align: center;
-  color: white;
- }
- 
+  }
+  
