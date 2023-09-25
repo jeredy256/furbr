@@ -270,14 +270,4 @@
     margin: auto;
     max-width: 100%;
   }
-  footer {
-    position: fixed; /* Fixa o elemento no lugar */
-  bottom: 0; /* O elemento ficará na parte inferior da janela */
-  left: 0; /* Alinhado à esquerda */
-  width: 100%; /* Largura total */
-  background-color: #333; /* Cor de fundo do footer */
-  color: #fff; /* Cor do texto do footer */
-  padding: 10px; /* Espaçamento interno do footer */
-  text-align: center;
-  }
   

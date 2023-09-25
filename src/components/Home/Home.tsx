@@ -1,6 +1,7 @@
 import  { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
@@ -109,10 +110,7 @@ const Home = () => {
         {/* <!-- Adicione mais postagens aqui --> */}
     </section>
 
-      <footer className='pora'><strong>Criador JEREDY</strong>
-      <p className='copy'>© 2023 Página de Mangás</p>
-      </footer>
-    
+      <Footer />
     </>
   );
 };

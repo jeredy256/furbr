@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { ref, push, onValue } from "firebase/database";
 import { db } from "../../../firebase"; // Importe a configuração do Firebase
 import style from './Coment.module.css'
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 // Defina o tipo para os comentários
 interface Comentario {
@@ -40,6 +42,8 @@ function HeteroSFW() {
   }, []);
 
   return (
+    <>
+    <Header />
     <div className={style.driv}>
       <h2 className={style.h2o}>Comentários para Hetero (SFW)</h2>
       <form className={style.form1} onSubmit={handleSubmit}>
@@ -57,6 +61,8 @@ function HeteroSFW() {
         ))}
       </ul>
     </div>
+    <Footer />
+    </>
   );
 }
 
