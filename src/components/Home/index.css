@@ -237,31 +237,38 @@
     display: block;
   }
   
-  /* Estilo para cabeçalho alternativo em telas menores (celular) */
-  @media screen and (max-width: 767px) {
-    header h1.h1alt {
-      font-size: 24px;
-    }
-  }
+
   
   /* Estilo para ajustar margem superior em telas menores (celular) */
   @media screen and (max-width: 767px) {
     .reto {
       margin-top: 60px;
     }
-  }
-  
-  /* Estilo para a seção "pig" em telas menores (celular) */
-  @media screen and (max-width: 767px) {
     .pig {
       padding: 20px;
     }
+    
+      header h1.h1alt {
+        font-size: 24px;
+      }
+      body {
+        font-size: 14px;
+      }
   }
   
+  
+
   /* Estilo para o tamanho do texto em telas menores (celular) */
-  @media screen and (max-width: 767px) {
+
+
+  
+  @media screen and (min-width: 767px) {
     body {
-      font-size: 14px;
+      font-size: 25px;
+    }
+    ul{
+      margin-top: 45px;
+      font-size: 8px;
     }
   }
   
