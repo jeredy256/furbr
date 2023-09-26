@@ -55,7 +55,7 @@ const Home = () => {
           <li><a href="./src/html/lancamentos.html">Lançamentos</a></li>
           <li><a href="./src/html/teste.html">Serviços</a></li>
           <li className="has-submenu">
-            <a className="anc" href="#">SFW</a>
+            <a className="anc" href="#">SFW<span className="submenu-icon">&#709;</span></a>
             <ul className="lulu">
               <li><Link to={"/furbr/gay_"}>Gay</Link></li>
               <li><Link to={'/furbr/hetero_'}>Hétero</Link></li>
@@ -63,7 +63,7 @@ const Home = () => {
             </ul>
           </li>
           <li className="has-submenu">
-            <a href='#' >NSFW</a>
+            <a href='#' >NSFW <span className="submenu-icon">&#709;</span></a>
             <ul className="lulu">
               <li><Link to={'/furbr/gay'}>Gay</Link></li>
               <li>
